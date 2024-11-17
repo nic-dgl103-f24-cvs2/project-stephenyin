@@ -17,7 +17,6 @@ body {
   line-height: 1.5;
 }
 
-
 /*-------- TYPOGRAPHY ---------*/
 
 h1 {
@@ -66,7 +65,6 @@ a.button {
   margin: auto;
 }
 
-
 .layout-helper {
   display: flex;
 }
@@ -98,7 +96,6 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   border-bottom: 2px solid #FEF100;
-  filter: brightness(200%);
 }
 
 .header-container {
@@ -113,34 +110,49 @@ header .header-logo {
   width: 20rem;
 }
 
-.toggle {
-  margin-right: 2rem;
-  padding-right: 0;
-}
-
 nav {
   display: flex;
   flex-direction: column;
   text-align: right;
+  position: relative;
 }
 
 nav a {
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #FEF100;
 }
 
 nav ul {
   list-style-type: none;
-  margin: 0;
+  margin: 6rem 0;
   padding: 0;
   display: none;
   font-size: 2.2rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 20rem;
+  border-radius: 0 0 4px 4px;
 }
 
 .show-items {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  padding: 1rem 2rem;
+}
+
+.toggle {
+  margin-right: 2rem;
+  padding-right: 0;
+  position: fixed;
+  right: 2rem;
+  z-index: 100;
 }
 
 /*-------- FOOTER ---------*/
@@ -188,6 +200,10 @@ nav ul {
 
 /*-------- HERO ---------*/
 
+.hero {
+  padding-bottom: 5rem;
+}
+
 .hero-container {
   background-image: url("images/Hero.png");
   background-repeat: no-repeat;
@@ -199,18 +215,137 @@ nav ul {
 }
 
 /*-------- SERVICES ---------*/
-.services h2,
-.services h3,
-.services p {
-  color: #505d68;
-}
-
 .services {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 5rem 0;
+  gap: 4rem;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.services-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 2rem;
+}
+
+.service-card {
+  border-radius: 1rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* transition: transform 0.3s ease; */
+}
+
+.service-card h3
+{
+  color: #FEF100;
+  /* color: rgba(25, 25, 25, 1); */
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-card p {
+  color: #FEF100;
+  /* color: rgba(25, 25, 25, 1); */
+  margin-bottom: 2rem;
+}
+
+/* Large screen styles */
+@media only screen and (min-width: 1200px) {
+  .services-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .service-card {
+    width: 32%;
+    min-height: 40rem;
+  }
+}
+
+/*-------- VIDEO INTRODUCTION ---------*/
+.video-introduction-container {
+  padding: 5rem 0;
+}
+
+.video-introduction-iframe {
+  width: 100%;
+  height: calc(100vw * 543 / 966);
+  padding: 5rem 0;
+}
+
+/*-------- TEAM SECTION ---------*/
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.team h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.team-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 100%;
+}
+
+.team-card {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.team-card__image {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
+.team-card__content {
+  padding: 2rem;
+}
+
+.team-card__name {
+  color: #FEF100;
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-card__title {
+  color: #FEF100;
+  font-size: 1.6rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.team-card__description {
+  color: #FEF100;
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
 
 /*-------- TESTIMONIALS ---------*/
@@ -221,7 +356,7 @@ nav ul {
   align-items: center;
   justify-content: space-between;
   width: 37.5rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: rgba(255, 255, 255, 0.9); */
   position: relative;
   z-index: 1;
   padding: 2rem;
@@ -248,29 +383,6 @@ nav ul {
   align-items: center;
   justify-content: space-between;
   width: 37.5rem;
-}
-
-.testimonials-card1,
-.testimonials-card2,
-.testimonials-card3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.testimonials-card-img {
-  background-image: url("images/Avatar.svg");
-  background-position: bottom right;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  margin-top: 4rem;
-  margin-bottom: 3rem;
-  width: 13.2rem;
-  height: 12.3rem;
 }
 
 /*--- CALL-TO-ACTION ---*/
@@ -324,17 +436,8 @@ nav ul {
 }
 
 /*-------- LARGE DEVICES (desktops, 1200px and up) ---------*/
-@media only screen and (min-width: 1200px) {
-  /* main {
-    background-image: url("images/nc-side.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    min-height: 100vh;
-    position: relative;
-  } */
 
+@media only screen and (min-width: 1200px) {
   h1 {
     font-size: 6.6rem;
     font-weight: 400;
@@ -349,6 +452,7 @@ nav ul {
 
   .content-width {
     width: 1130px;
+    margin: auto;
   }
 
   /* LARGE HEADER */
@@ -370,20 +474,17 @@ nav ul {
   #nav-items {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    align-items: center;
   }
 
   header .header-logo {
     width: 30rem;
   }
+
   /* LARGE HERO */
-  /* section.hero {
-    background-size: auto 95%;
-    background-position: right;
-    text-align: initial;
-    height: initial;
-  } */
+
+  .hero {
+    padding: 5rem;
+  }
 
   .hero-container {
     background-size: 55% auto;
@@ -400,35 +501,21 @@ nav ul {
     width: 50%;
   }
 
-  /* LARGE BENEFITS */
   .main {
     display: flex;
+  }
+
+  .team-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-card {
+    min-height: 45rem;
   }
 
   /* LARGE TESTIMONIALS */
   .testimonials-container {
     width: 144rem;
-  }
-
-  .testimonials-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: auto;
-    gap: 3rem;
-  }
-
-  .testimonials-card1,
-  .testimonials-card2,
-  .testimonials-card3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
-    width: 36rem;
   }
 
   /*-------- FOOTER ---------*/
@@ -453,10 +540,21 @@ nav ul {
     flex-grow: 1;
   }
 
-  .benefits-container,
-  .testimonials-container,
-  .call-to-action-container {
-    max-width: 1130px;
-    margin: 4rem auto;
+  nav ul {
+    position: static;
+    background-color: transparent;
+    min-width: auto;
+  }
+
+  nav ul li {
+    padding: 0 1.5rem;
+  }
+
+  nav ul li:hover {
+    background-color: transparent;
+  }
+
+  nav a:hover {
+    color: rgba(254, 241, 0, 0.7);
   }
 }
