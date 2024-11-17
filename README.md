@@ -48,7 +48,7 @@ I identified several issues that can be enhanced:
     - Hero
     - Services
     - Our Team
-    - Introduction Video
+    - Video Introduction
     - Testimonials
     - Resources
   - Footer

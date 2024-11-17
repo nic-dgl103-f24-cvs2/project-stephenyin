@@ -1,0 +1,462 @@
+/*-------- GLOBAL STYLES ---------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  color: #FEF100;
+  line-height: 1.5;
+}
+
+
+/*-------- TYPOGRAPHY ---------*/
+
+h1 {
+  font-size: 3.8rem;
+  color: #FEF100;
+  line-height: 1.3;
+  font-weight: 700;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h2 {
+  font-size: 3.8rem;
+  color: #FEF100;
+  line-height: 1.3;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+p {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+a {
+  color: #424b5a;
+  display: block;
+  padding: 12px 48px;
+  margin: 1rem 0;
+}
+
+a.button {
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #575d69;
+  border-radius: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/*-------- UTILITY ---------*/
+
+.content-width {
+  width: 334px;
+  margin: auto;
+}
+
+
+.layout-helper {
+  display: flex;
+}
+
+.bright-background-transparent {
+  background-color: rgba(244, 245, 247, 0.7);
+}
+
+.dark-background-transparent-light {
+  background-color: rgba(247, 247, 249, 1);
+}
+
+.dark-background-transparent-dark {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.bright-background {
+  background-color: rgba(244, 245, 247, 1);
+}
+
+.dark-background {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+/*-------- HEADER ---------*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #FEF100;
+  filter: brightness(200%);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  filter: brightness(200%);
+}
+
+header .header-logo {
+  width: 20rem;
+}
+
+.toggle {
+  margin-right: 2rem;
+  padding-right: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  font-size: 2.2rem;
+}
+
+.show-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/*-------- FOOTER ---------*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: flex-start;
+  filter: brightness(200%);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-upper-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #424b5a 1px solid;
+  padding-left: 5rem;
+  padding-right: 10rem;
+  width: 100%;
+}
+
+.footer-upper-container a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #505d68;
+}
+
+.footer-logo {
+  order: -1;
+}
+
+/*-------- HERO ---------*/
+
+.hero-container {
+  background-image: url("images/Hero.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 100% auto;
+  min-height: 70vh;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+/*-------- SERVICES ---------*/
+.services h2,
+.services h3,
+.services p {
+  color: #505d68;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 0;
+}
+
+/*-------- TESTIMONIALS ---------*/
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 37.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.testimonials-container h2 {
+  color: #505d68;
+  font-weight: 700;
+  font-size: 3.8rem;
+  text-align: center;
+  width: 28rem;
+}
+
+.testimonials-container h3 {
+  color: #505d68;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.testimonials-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 37.5rem;
+}
+
+.testimonials-card1,
+.testimonials-card2,
+.testimonials-card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.testimonials-card-img {
+  background-image: url("images/Avatar.svg");
+  background-position: bottom right;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  width: 13.2rem;
+  height: 12.3rem;
+}
+
+/*--- CALL-TO-ACTION ---*/
+
+.call-to-action {
+  display: flex;
+}
+
+.call-to-action-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 37.5rem;
+  height: auto;
+  background-color: rgba(242, 245, 247, 0.9);
+  text-align: center;
+  margin-top: 4rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+}
+
+.call-to-action-container h2 {
+  color: #505d68;
+  font-weight: 700;
+  font-size: 3.8rem;
+  text-align: center;
+  width: 28rem;
+}
+
+.call-to-action-container p {
+  color: #a1aeb7;
+  font-weight: 400;
+  text-align: center;
+  width: 28rem;
+}
+
+.download-btn {
+  height: 4rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  color: #ffffff;
+  background-color: #424b5a;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/*-------- LARGE DEVICES (desktops, 1200px and up) ---------*/
+@media only screen and (min-width: 1200px) {
+  /* main {
+    background-image: url("images/nc-side.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+  } */
+
+  h1 {
+    font-size: 6.6rem;
+    font-weight: 400;
+    padding-left: 0;
+    padding-right: 0;
+    width: 50%;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .content-width {
+    width: 1130px;
+  }
+
+  /* LARGE HEADER */
+  nav {
+    text-align: left;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-grow: 2;
+  }
+
+  .sign {
+    flex-grow: 0;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  #nav-items {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+  }
+
+  header .header-logo {
+    width: 30rem;
+  }
+  /* LARGE HERO */
+  /* section.hero {
+    background-size: auto 95%;
+    background-position: right;
+    text-align: initial;
+    height: initial;
+  } */
+
+  .hero-container {
+    background-size: 55% auto;
+    background-position: right;
+    text-align: initial;
+    height: initial;
+    padding: 10rem 0;
+  }
+
+  section.hero p {
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 50%;
+  }
+
+  /* LARGE BENEFITS */
+  .main {
+    display: flex;
+  }
+
+  /* LARGE TESTIMONIALS */
+  .testimonials-container {
+    width: 144rem;
+  }
+
+  .testimonials-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    gap: 3rem;
+  }
+
+  .testimonials-card1,
+  .testimonials-card2,
+  .testimonials-card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    width: 36rem;
+  }
+
+  /*-------- FOOTER ---------*/
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-upper-container {
+    gap: 5rem;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .footer-logo {
+    order: 0;
+    flex-grow: 1;
+  }
+
+  .benefits-container,
+  .testimonials-container,
+  .call-to-action-container {
+    max-width: 1130px;
+    margin: 4rem auto;
+  }
+}
