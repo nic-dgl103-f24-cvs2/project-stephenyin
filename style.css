@@ -234,7 +234,8 @@ nav ul {
 .services h2 {
   text-align: center;
   margin-bottom: 4rem;
-  color: #424b5a;
+  /* color: #424b5a; */
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .services-cards {
@@ -247,27 +248,57 @@ nav ul {
 }
 
 .service-card {
+  border: 5px solid rgba(0, 0, 0, 0.9);
   border-radius: 1rem;
-  padding: 3rem;
+  /* padding: 3rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* transition: transform 0.3s ease; */
+  height: 50rem;
+  justify-content: flex-end;
+}
+
+.service-card-text {
+  padding: 2rem;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .service-card h3
 {
   color: #FEF100;
-  /* color: rgba(25, 25, 25, 1); */
   font-size: 2.4rem;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1rem; */
 }
 
 .service-card p {
   color: #FEF100;
   /* color: rgba(25, 25, 25, 1); */
   margin-bottom: 2rem;
+}
+
+.accounting {
+  background-image: url("images/accounting.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+}
+
+.tax {
+  background-image: url("images/tax.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+}
+
+.consulting {
+  background-image: url("images/consultant.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
 }
 
 
@@ -483,7 +514,7 @@ nav ul {
   background-color: rgba(255, 255, 255, 0.05);
   color: #FEF100;
   font-size: 1.6rem;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 
 .form-input:focus,
@@ -496,7 +527,7 @@ nav ul {
 
 .form-select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23FEF100' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23FEF100' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E"); */
   background-repeat: no-repeat;
   background-position: right 1.2rem center;
   padding-right: 3rem;
@@ -546,6 +577,66 @@ nav ul {
 
 .form-input:invalid + .error-message {
   display: block;
+}
+
+/* RESOURCES TABLE */
+.resources {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 5rem 0;
+  align-items: center;
+}
+
+.resources-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 4rem 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 1rem;
+}
+
+.resources-container table {
+  width: 100%;
+}
+
+.resources-container table, th, td  {
+  /* border-collapse: collapse; */
+  border: 1px solid #FEF100;
+}
+
+.resources-container th, td {
+  padding: 1rem;
+}
+
+.resources-container tr:hover {
+  background-color: rgba(254, 241, 0, 0.1);
+}
+
+.resources-container a {
+  text-decoration: none;
+  height: auto;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: #FEF100;
+  color: #424b5a;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+}
+
+.resources-container th.resource {
+  width: 20%;
+}
+
+.resources-container th.description {
+  width: 70%;
+}
+
+.resources-container th.link {
+  width: 10%;
 }
 
 /*-------- LARGE DEVICES (desktops, 1200px and up) ---------*/
@@ -632,8 +723,35 @@ nav ul {
   .service-card {
     width: 32%;
     min-height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .accounting {
+    background-image: url("images/accounting.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 80%;
+  }
+
+  .tax {
+    background-image: url("images/tax.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 80%;
+  }
+
+  .consulting {
+    background-image: url("images/consultant.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 80%;
+  }
 
   .team-cards {
     grid-template-columns: repeat(3, 1fr);
@@ -641,6 +759,10 @@ nav ul {
 
   .team-card {
     min-height: 45rem;
+  }
+
+  .team-card:hover {
+    transform: translateY(-5px);
   }
 
   /* LARGE TESTIMONIALS */
@@ -782,4 +904,26 @@ nav ul {
   .form-textarea {
     min-height: 15rem;
   }
+
+  .resources {
+    padding: 8rem 0;
+  }
+
+  .resources-text {
+    width: 30%;
+  }
+  .resources-container {
+    max-width: 120rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+    padding: 6rem;
+  }
+
+  .resources h2 {
+    text-align: left;
+    font-size: 4.2rem;
+    margin-bottom: 2rem;
+  }
+
 }
