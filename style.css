@@ -825,11 +825,13 @@ td {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: auto;
   }
 
   .team-card {
-    min-height: 50rem;
+    /* min-height: 50rem; */
     transition: transform 0.3s ease;
+    height: 100%;
   }
 
   .team-card:hover {
@@ -861,13 +863,11 @@ td {
     border-radius: 0 2rem 2rem 0;
     width: 10%;
     writing-mode: vertical-rl;
-    text-orientation: mixed;
-    text-align: center;
     letter-spacing: 1.5rem;
     font-size: 2rem;
     margin: 0;
     padding: 0;
-    height: 49%;
+    height: auto;
   }
 
   /*-------- FOOTER ---------*/
