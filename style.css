@@ -197,11 +197,6 @@ nav ul {
   color: #505d68;
 }
 
-.footer-bottom-container {
-  color: #505d68;
-}
-
-
 .footer-logo {
   order: -1;
 }
@@ -216,6 +211,14 @@ nav ul {
   padding: 0;
   width: 3rem;
   height: auto;
+}
+
+.footer-nav a {
+  color: whitesmoke;
+}
+
+.footer-bottom-container p {
+  color: whitesmoke;
 }
 
 
