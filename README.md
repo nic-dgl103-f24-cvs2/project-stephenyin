@@ -10,7 +10,7 @@ I identified several issues that can be enhanced:
 
 ![obs0.png](./images/obs-0.png)
 
-- On each page, the banner image of the person is too large, making it difficult to view on any screen size.
+- On each page, the Hero background image of the person is too large, making it difficult to view on any screen size.
 
 ![obs1.png](./images/obs-1.png)
 
@@ -47,10 +47,10 @@ I identified several issues that can be enhanced:
   - Main
     - Hero
     - Services
-    - Our Team
     - Video Introduction
+    - Our Team
     - Testimonials
-    - Resources
+    - Call-to-Action
   - Footer
     - Logo
     - Contact Information
@@ -62,10 +62,10 @@ I identified several issues that can be enhanced:
     - Logo
     - Navigation
   - Main
-    - Introduction
     - Accounting Serveces
     - Tax Services
     - Business Consulting
+    - Resources
   - Footer
     - Logo
     - Contact Information
@@ -77,10 +77,8 @@ I identified several issues that can be enhanced:
     - Logo
     - Navigation
   - Main
-    - Introduction
     - Team Member Profiles
-    - Availability Table
-    - Appointment Form
+    - Making Appointment Form
   - Footer
     - Logo
     - Contact Information

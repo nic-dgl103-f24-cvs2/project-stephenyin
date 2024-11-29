@@ -330,7 +330,8 @@ nav ul {
 }
 
 
-/*-------- VIDEO INTRODUCTION ---------*/
+/*-------- VIDEO ---------*/
+
 .video-introduction-container {
   padding: 5rem 0;
 }
@@ -342,6 +343,7 @@ nav ul {
 }
 
 /*-------- TEAM SECTION ---------*/
+
 .team {
   display: flex;
   flex-direction: column;
@@ -419,29 +421,6 @@ nav ul {
   object-fit: cover;
 }
 
-.team-card__content {
-  padding: 2rem;
-}
-
-.team-card__name {
-  color: #FEF100;
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.team-card__title {
-  color: #FEF100;
-  font-size: 1.6rem;
-  opacity: 0.8;
-  margin-bottom: 1.5rem;
-}
-
-.team-card__description {
-  color: #FEF100;
-  font-size: 1.4rem;
-  line-height: 1.6;
-}
-
 .team-page-team-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -492,6 +471,9 @@ nav ul {
 }
 
 .testimonial-card__content {
+  font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -764,9 +746,7 @@ td {
     width: 50%;
   }
 
-  .main {
-    display: flex;
-  }
+  /* LARGE SERVICES */
 
   .services-cards {
     flex-direction: row;
@@ -820,6 +800,8 @@ td {
     margin: 0;
     padding: 0;
   }
+
+  /* LARGE TEAM */
 
   .team-cards {
     display: flex;
@@ -958,6 +940,7 @@ td {
   }
 
   /* LARGE TESTIMONIALS */
+
   .testimonials-cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -974,7 +957,7 @@ td {
     transform: translateY(-5px) scale(1.05);
   }
 
-  /*--- CALL-TO-ACTION ---*/
+  /*--- LARGE CALL-TO-ACTION ---*/
 
   .call-to-action {
     padding: 8rem 0;
@@ -1033,6 +1016,8 @@ td {
   .form-textarea {
     min-height: 15rem;
   }
+
+  /* LARGE RESOURCES */
 
   .resources {
     padding: 8rem 0;
